@@ -15,7 +15,7 @@ public class Main extends Application {
 			BorderPane tela = (BorderPane) carregar.load();
 			Scene scene = new Scene(tela,400,400);
 			primaryStage.setScene(scene);
-			
+			primaryStage.setFullScreen(true); //coloca o app pra rodar fullscreen
 			
 		    PainelController control = carregar.getController(); // define a classe de controle
 			
