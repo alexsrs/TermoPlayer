@@ -1,2 +1,2 @@
 # TermoPlayer
-Biblioteca RXTX mac OS http://jlog.org/rxtx-mac.html
+Biblioteca RXTX http://rxtx.qbang.org/wiki/index.php/Download
