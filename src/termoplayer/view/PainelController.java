@@ -1,8 +1,8 @@
 package termoplayer.view;
 
-import java.awt.Label;
+
 import javafx.fxml.FXML;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -13,6 +13,7 @@ public class PainelController {
 	
 	@FXML
 	private MediaView video;
+	
 	@FXML
 	private Label lblLabel;
 	
@@ -29,12 +30,14 @@ public class PainelController {
 		//this.media = new Media(replace);
 		//String workingDir = System.getProperty("User.dir");
 		//File f = new File(workingDir, "src\\videoteste.mp4");
-		String caminho = "file:/Users/Alex/Documentos/Workspace/TermoPlayer/meuVideo.mp4";
+		String caminho = "file:/Users/Creapix/Documents/workspace/TermoPlayer/src/videoteste.mp4";
 		
 		this.media = new Media(caminho);
 		this.player = new MediaPlayer(this.media);
 		this.video.setMediaPlayer(this.player);
+		player.setCycleCount(MediaPlayer.INDEFINITE);
 		this.player.play();
+		lblLabel.setText("44");
 		
 		
 	}
