@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		
-			FXMLLoader carregar = new FXMLLoader(Main.class.getClassLoader().getResource("TermoPlayer/src/termoplayer/view/painel.fxml"));
+			FXMLLoader carregar = new FXMLLoader(Main.class.getClassLoader().getResource("termoplayer/view/painel.fxml"));
 			BorderPane tela = (BorderPane) carregar.load();
 			Scene scene = new Scene(tela);
 			primaryStage.setScene(scene);

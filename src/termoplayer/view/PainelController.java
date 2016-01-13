@@ -15,8 +15,7 @@ public class PainelController {
 	private MediaView video;
 	@FXML
 	private Label lblLabel;
-	@FXML
-	private BorderPane tela;
+	
 	
 	@FXML
 	private void initialize(){
