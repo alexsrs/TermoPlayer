@@ -1,37 +1,41 @@
 package serial;
 
+import javafx.scene.control.Label;
 import serial.SerialCom;
 import serial.SerialComLeitura;
+import termoplayer.view.PainelController;
 
 public class TestaSerial extends SerialCom {
 
 	public static void main(String[] args) {
-		//Iniciando leitura serial
+		// Iniciando leitura serial
 
-        SerialComLeitura leitura = new SerialComLeitura("/dev/cu.usbmodemFD131", 9600, 0);
+		// SerialComLeitura leitura = new
+		// SerialComLeitura("/dev/cu.usbmodemFD131", 9600, 0);
+		SerialComLeitura leitura = new SerialComLeitura("COM5", 9600, 0);
 
-        leitura.HabilitarLeitura();
+		leitura.HabilitarLeitura();
 
-        leitura.ObterIdDaPorta();
+		leitura.ObterIdDaPorta();
 
-        leitura.AbrirPorta();
+		leitura.AbrirPorta();
 
-        leitura.LerDados();
+		leitura.LerDados();
 
-        //Controle de tempo da leitura aberta na serial
+		// Controle de tempo da leitura aberta na serial
 
-        try {
-        	
-            Thread.sleep(1000);
+		try {
 
-        } catch (InterruptedException ex) {
+			Thread.sleep(1000);
 
-            System.out.println("Erro na Thread: " + ex);
+		} catch (InterruptedException ex) {
 
-        }
+			System.out.println("Erro na Thread: " + ex);
 
-        leitura.FecharCom();
+		}
 
-    }
+		leitura.FecharCom();
+
+	}
 
 }

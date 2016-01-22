@@ -3,6 +3,9 @@ package serial;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
@@ -39,7 +42,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	private String Porta;
 
-	protected String peso;
+	protected static String peso;
 
 	public void setPeso(String peso) {
 
@@ -47,7 +50,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	}
 
-	public String getPeso() {
+	public static String getPeso() {
 
 		return peso;
 
@@ -117,7 +120,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 			PortaOK = true;
 
-			// configurar par‚metros
+			// configurar parâ€šmetros
 
 			porta.setSerialPortParams(baudrate,
 
@@ -133,7 +136,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 			PortaOK = false;
 
-			System.out.println("Erro abrindo comunicaÁ„o: " + e);
+			System.out.println("Erro abrindo comunicaÃ�â€žo: " + e);
 
 			System.exit(1);
 
@@ -141,6 +144,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	}
 
+	// public void LerDados() {
 	public void LerDados() {
 
 		if (Escrita == false) {
@@ -148,11 +152,10 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 			try {
 
 				entrada = porta.getInputStream();
-				System.out.println(entrada);
 
 			} catch (Exception e) {
 
-				 System.out.println("Erro de stream: " + e);
+				System.out.println("Erro de stream: " + e);
 
 				System.exit(1);
 
@@ -250,107 +253,111 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	}
 
- public void serialEvent(SerialPortEvent ev){       
+	public void serialEvent(SerialPortEvent ev) {
 
-    StringBuffer bufferLeitura = new StringBuffer();
+		StringBuffer bufferLeitura = new StringBuffer();
 
-    int novoDado = 0;
+		int novoDado = 0;
 
-   
+		switch (ev.getEventType()) {
 
-    switch (ev.getEventType()) {
+		case SerialPortEvent.BI:
 
-        case SerialPortEvent.BI:
+		case SerialPortEvent.OE:
 
-        case SerialPortEvent.OE:
+		case SerialPortEvent.FE:
 
-        case SerialPortEvent.FE:
+		case SerialPortEvent.PE:
 
-        case SerialPortEvent.PE:
+		case SerialPortEvent.CD:
 
-        case SerialPortEvent.CD:
+		case SerialPortEvent.CTS:
 
-        case SerialPortEvent.CTS:
+		case SerialPortEvent.DSR:
 
-        case SerialPortEvent.DSR:
+		case SerialPortEvent.RI:
 
-        case SerialPortEvent.RI:
+		case SerialPortEvent.OUTPUT_BUFFER_EMPTY:
 
-        case SerialPortEvent.OUTPUT_BUFFER_EMPTY:
+			break;
 
-        break;
+		case SerialPortEvent.DATA_AVAILABLE:
 
-        case SerialPortEvent.DATA_AVAILABLE:
+			// Novo algoritmo de leitura.
 
-            //Novo algoritmo de leitura.
+			while (novoDado != -1) {
 
-            while(novoDado != -1){
+				try {
 
-                try{
+					novoDado = entrada.read();
 
-                    novoDado = entrada.read();
+					if (novoDado == -1) {
 
-                    if(novoDado == -1){
+						break;
 
-                        break;
+					}
 
-                    }
+					if ('\r' == (char) novoDado) {
 
-                    if('\r' == (char)novoDado){
+						bufferLeitura.append('\n');
 
-                        bufferLeitura.append('\n');
+					} else {
 
-                    }else{
+						bufferLeitura.append((char) novoDado);
 
-                        bufferLeitura.append((char)novoDado);
+					}
 
-                    }
+				} catch (IOException ioe) {
 
-                }catch(IOException ioe){
+					System.out.println("Erro de leitura serial: " + ioe);
 
-                  System.out.println("Erro de leitura serial: " + ioe);
+				}
 
-                }
+			}
 
-            }
+			setPeso(new String(bufferLeitura));
 
+			System.out.println(getDateTime() + " A temperatura agora é " + getPeso());
 
-            setPeso(new String(bufferLeitura));
+			// String temp = getPeso();
+			// System.out.println(temp);
 
-            System.out.println(getPeso());
+			break;
 
-        break;
+		}
+	}
 
-    }
- }
-    public void FecharCom(){
+	public void FecharCom() {
 
-        try {
+		try {
 
-            porta.close();
+			porta.close();
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            System.out.println("Erro fechando porta: " + e);
+			System.out.println("Erro fechando porta: " + e);
 
-            System.exit(0);
+			System.exit(0);
 
-        }
+		}
 
-}
+	}
 
- 
-    public String obterPorta(){
+	private String getDateTime() {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
 
-        return Porta;
+	public String obterPorta() {
 
-}
+		return Porta;
 
-   
+	}
 
-public int obterBaudrate(){
+	public int obterBaudrate() {
 
-        return baudrate;
+		return baudrate;
 
-    }
+	}
 }

@@ -1,7 +1,7 @@
 #
 # A fatal error has been detected by the Java Runtime Environment:
 #
-#  SIGSEGV (0xb) at pc=0x000000011a14c12f, pid=1161, tid=4099
+#  SIGSEGV (0xb) at pc=0x000000011e91512f, pid=1352, tid=5891
 #
 # JRE version: Java(TM) SE Runtime Environment (8.0_66-b17) (build 1.8.0_66-b17)
 # Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b17 mixed mode bsd-amd64 compressed oops)
@@ -18,66 +18,66 @@
 
 ---------------  T H R E A D  ---------------
 
-Current thread (0x00007f9ff3801800):  JavaThread "main" [_thread_in_native, id=4099, stack(0x0000700000084000,0x0000700000184000)]
+Current thread (0x00007fbb2380a800):  JavaThread "main" [_thread_in_native, id=5891, stack(0x000070000011a000,0x000070000021a000)]
 
 siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007000010c6868
 
 Registers:
-RAX=0x0000000000000000, RBX=0x00007000010c6700, RCX=0x0000700000184050, RDX=0xffffffffffffffff
-RSP=0x0000700000183710, RBP=0x0000700000183720, RSI=0x0000000000000000, RDI=0x000000000000003c
+RAX=0x0000000000000000, RBX=0x00007000010c6700, RCX=0x000070000021a050, RDX=0xffffffffffffffff
+RSP=0x0000700000219710, RBP=0x0000700000219720, RSI=0x0000000000000000, RDI=0x000000000000003c
 R8 =0x0000000000000000, R9 =0x0000000002faf080, R10=0x0000000000000001, R11=0x0000000000000247
-R12=0x0000000000000010, R13=0x00000001171240f0, R14=0x00007000001837a0, R15=0x00007f9ff3801800
-RIP=0x000000011a14c12f, EFLAGS=0x0000000000010206, ERR=0x0000000000000004
+R12=0x0000000000000010, R13=0x000000011b9240f0, R14=0x00007000002197a0, R15=0x00007fbb2380a800
+RIP=0x000000011e91512f, EFLAGS=0x0000000000010206, ERR=0x0000000000000004
   TRAPNO=0x000000000000000e
 
-Top of Stack: (sp=0x0000700000183710)
-0x0000700000183710:   00000001171240f0 0000000000000000
-0x0000700000183720:   0000700000183780 0000000105415954
-0x0000700000183730:   0000000105421563 00000001054156a2
-0x0000700000183740:   0000700000183740 00000001171240f0
-0x0000700000183750:   00007000001837a0 000000011712f828
-0x0000700000183760:   0000000000000000 00000001171240f0
-0x0000700000183770:   0000000000000000 00007000001837a0
-0x0000700000183780:   00007000001837e8 0000000105407c4d
-0x0000700000183790:   0000000000000000 000000010540f578
-0x00007000001837a0:   00000007aacc9d58 00007000001837a8
-0x00007000001837b0:   0000000117124597 0000700000183800
-0x00007000001837c0:   000000011712f828 0000000000000000
-0x00007000001837d0:   0000000117124600 00007000001837a0
-0x00007000001837e0:   0000700000183800 0000700000183858
-0x00007000001837f0:   0000000105407c4d 0000000000000000
-0x0000700000183800:   00000007aacc9d58 0000000000000001
-0x0000700000183810:   0000000000000000 0000700000183808
-0x0000700000183820:   0000000117124ff3 0000700000183880
-0x0000700000183830:   000000011712f828 0000000000000000
-0x0000700000183840:   0000000117125058 0000700000183800
-0x0000700000183850:   0000700000183880 00007000001838c8
-0x0000700000183860:   0000000105407c4d 0000000000000000
-0x0000700000183870:   0000000000000000 00000007aacc9d58
-0x0000700000183880:   00000007aacc9d58 0000700000183888
-0x0000700000183890:   000000011711a644 00007000001838e0
-0x00007000001838a0:   000000011711a868 0000000000000000
-0x00007000001838b0:   000000011711a698 0000700000183880
-0x00007000001838c0:   00007000001838e0 0000700000183928
-0x00007000001838d0:   0000000105407c4d 0000000000000000
-0x00007000001838e0:   00000007aac733f8 00007000001838e8
-0x00007000001838f0:   00000001171174b7 0000700000183948
-0x0000700000183900:   0000000117117ce8 0000000000000000 
+Top of Stack: (sp=0x0000700000219710)
+0x0000700000219710:   000000011b9240f0 0000000000000000
+0x0000700000219720:   0000700000219780 0000000109c15954
+0x0000700000219730:   0000000109c21563 0000000109c156a2
+0x0000700000219740:   0000700000219740 000000011b9240f0
+0x0000700000219750:   00007000002197a0 000000011b92f828
+0x0000700000219760:   0000000000000000 000000011b9240f0
+0x0000700000219770:   0000000000000000 00007000002197a0
+0x0000700000219780:   00007000002197e8 0000000109c07c4d
+0x0000700000219790:   0000000000000000 0000000109c0f578
+0x00007000002197a0:   00000007aacc9d50 00007000002197a8
+0x00007000002197b0:   000000011b924597 0000700000219800
+0x00007000002197c0:   000000011b92f828 0000000000000000
+0x00007000002197d0:   000000011b924600 00007000002197a0
+0x00007000002197e0:   0000700000219800 0000700000219858
+0x00007000002197f0:   0000000109c07c4d 0000000000000000
+0x0000700000219800:   00000007aacc9d50 0000000000000001
+0x0000700000219810:   0000000000000000 0000700000219808
+0x0000700000219820:   000000011b924ff3 0000700000219880
+0x0000700000219830:   000000011b92f828 0000000000000000
+0x0000700000219840:   000000011b925058 0000700000219800
+0x0000700000219850:   0000700000219880 00007000002198c8
+0x0000700000219860:   0000000109c07c4d 0000000000000000
+0x0000700000219870:   0000000000000000 00000007aacc9d50
+0x0000700000219880:   00000007aacc9d50 0000700000219888
+0x0000700000219890:   000000011b91a654 00007000002198e0
+0x00007000002198a0:   000000011b91a878 0000000000000000
+0x00007000002198b0:   000000011b91a6a8 0000700000219880
+0x00007000002198c0:   00007000002198e0 0000700000219928
+0x00007000002198d0:   0000000109c07c4d 0000000000000000
+0x00007000002198e0:   00000007aac73518 00007000002198e8
+0x00007000002198f0:   000000011b9174b7 0000700000219948
+0x0000700000219900:   000000011b917ce8 0000000000000000 
 
-Instructions: (pc=0x000000011a14c12f)
-0x000000011a14c10f:   00 01 00 00 00 48 8b bb 78 01 00 00 be 06 00 00
-0x000000011a14c11f:   00 e8 4d 27 00 00 bf 50 c3 00 00 e8 c7 27 00 00
-0x000000011a14c12f:   83 bb 68 01 00 00 01 74 16 48 8b bb 78 01 00 00
-0x000000011a14c13f:   e8 16 27 00 00 c7 83 68 01 00 00 01 00 00 00 5b 
+Instructions: (pc=0x000000011e91512f)
+0x000000011e91510f:   00 01 00 00 00 48 8b bb 78 01 00 00 be 06 00 00
+0x000000011e91511f:   00 e8 4d 27 00 00 bf 50 c3 00 00 e8 c7 27 00 00
+0x000000011e91512f:   83 bb 68 01 00 00 01 74 16 48 8b bb 78 01 00 00
+0x000000011e91513f:   e8 16 27 00 00 c7 83 68 01 00 00 01 00 00 00 5b 
 
 Register to memory mapping:
 
 RAX=0x0000000000000000 is an unknown value
 RBX=0x00007000010c6700 is an unknown value
-RCX=0x0000700000184050 is an unknown value
+RCX=0x000070000021a050 is an unknown value
 RDX=0xffffffffffffffff is an unknown value
-RSP=0x0000700000183710 is pointing into the stack for thread: 0x00007f9ff3801800
-RBP=0x0000700000183720 is pointing into the stack for thread: 0x00007f9ff3801800
+RSP=0x0000700000219710 is pointing into the stack for thread: 0x00007fbb2380a800
+RBP=0x0000700000219720 is pointing into the stack for thread: 0x00007fbb2380a800
 RSI=0x0000000000000000 is an unknown value
 RDI=0x000000000000003c is an unknown value
 R8 =0x0000000000000000 is an unknown value
@@ -85,12 +85,12 @@ R9 =0x0000000002faf080 is an unknown value
 R10=0x0000000000000001 is an unknown value
 R11=0x0000000000000247 is an unknown value
 R12=0x0000000000000010 is an unknown value
-R13={method} {0x00000001171240f0} 'interruptEventLoop' '()V' in 'gnu/io/RXTXPort'
-R14=0x00007000001837a0 is pointing into the stack for thread: 0x00007f9ff3801800
-R15=0x00007f9ff3801800 is a thread
+R13={method} {0x000000011b9240f0} 'interruptEventLoop' '()V' in 'gnu/io/RXTXPort'
+R14=0x00007000002197a0 is pointing into the stack for thread: 0x00007fbb2380a800
+R15=0x00007fbb2380a800 is a thread
 
 
-Stack: [0x0000700000084000,0x0000700000184000],  sp=0x0000700000183710,  free space=1021k
+Stack: [0x000070000011a000,0x000070000021a000],  sp=0x0000700000219710,  free space=1021k
 Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
 C  [librxtxSerial.jnilib+0x312f]  Java_gnu_io_RXTXPort_interruptEventLoop+0x6b
 j  gnu.io.RXTXPort.interruptEventLoop()V+0
@@ -99,9 +99,9 @@ j  gnu.io.RXTXPort.close()V+91
 j  serial.SerialComLeitura.FecharCom()V+4
 j  serial.TestaSerial.main([Ljava/lang/String;)V+63
 v  ~StubRoutines::call_stub
-V  [libjvm.dylib+0x2ea35e]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x6ae
-V  [libjvm.dylib+0x3210d0]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x1bf
-V  [libjvm.dylib+0x319e4a]  jni_CallStaticVoidMethod+0x15d
+V  [libjvm.dylib+0x2ea35e]
+V  [libjvm.dylib+0x3210d0]
+V  [libjvm.dylib+0x319e4a]
 C  [java+0x393e]  JavaMain+0x9b1
 C  [libsystem_pthread.dylib+0x3c13]  _pthread_body+0x83
 C  [libsystem_pthread.dylib+0x3b90]  _pthread_body+0x0
@@ -119,57 +119,57 @@ v  ~StubRoutines::call_stub
 ---------------  P R O C E S S  ---------------
 
 Java Threads: ( => current thread )
-  0x00007f9ff2809000 JavaThread "Service Thread" daemon [_thread_blocked, id=18435, stack(0x0000700000dc1000,0x0000700000ec1000)]
-  0x00007f9ff2812000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=17923, stack(0x0000700000cbe000,0x0000700000dbe000)]
-  0x00007f9ff3827800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=17411, stack(0x0000700000bbb000,0x0000700000cbb000)]
-  0x00007f9ff380f000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16899, stack(0x0000700000ab8000,0x0000700000bb8000)]
-  0x00007f9ff3042000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13839, stack(0x00007000009b5000,0x0000700000ab5000)]
-  0x00007f9ff2810800 JavaThread "Finalizer" daemon [_thread_blocked, id=11779, stack(0x000070000082f000,0x000070000092f000)]
-  0x00007f9ff4022000 JavaThread "Reference Handler" daemon [_thread_blocked, id=11267, stack(0x000070000072c000,0x000070000082c000)]
-=>0x00007f9ff3801800 JavaThread "main" [_thread_in_native, id=4099, stack(0x0000700000084000,0x0000700000184000)]
+  0x00007fbb2504f000 JavaThread "Service Thread" daemon [_thread_blocked, id=18435, stack(0x0000700000dc1000,0x0000700000ec1000)]
+  0x00007fbb24801000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=17923, stack(0x0000700000cbe000,0x0000700000dbe000)]
+  0x00007fbb23824800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=17411, stack(0x0000700000bbb000,0x0000700000cbb000)]
+  0x00007fbb23820800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16899, stack(0x0000700000ab8000,0x0000700000bb8000)]
+  0x00007fbb2505c800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13839, stack(0x00007000009b5000,0x0000700000ab5000)]
+  0x00007fbb25021800 JavaThread "Finalizer" daemon [_thread_blocked, id=12291, stack(0x000070000082f000,0x000070000092f000)]
+  0x00007fbb25021000 JavaThread "Reference Handler" daemon [_thread_blocked, id=11779, stack(0x000070000072c000,0x000070000082c000)]
+=>0x00007fbb2380a800 JavaThread "main" [_thread_in_native, id=5891, stack(0x000070000011a000,0x000070000021a000)]
 
 Other Threads:
-  0x00007f9ff401f000 VMThread [stack: 0x0000700000629000,0x0000700000729000] [id=10755]
-  0x00007f9ff2855000 WatcherThread [stack: 0x0000700000ec4000,0x0000700000fc4000] [id=18947]
+  0x00007fbb2384a800 VMThread [stack: 0x0000700000629000,0x0000700000729000] [id=11267]
+  0x00007fbb2502b000 WatcherThread [stack: 0x0000700000ec4000,0x0000700000fc4000] [id=18947]
 
 VM state:not at safepoint (normal execution)
 
 VM Mutex/Monitor currently owned by a thread: None
 
 Heap:
- PSYoungGen      total 18944K, used 2299K [0x00000007aab00000, 0x00000007ac000000, 0x00000007c0000000)
-  eden space 16384K, 14% used [0x00000007aab00000,0x00000007aad3eed8,0x00000007abb00000)
+ PSYoungGen      total 18944K, used 2294K [0x00000007aab00000, 0x00000007ac000000, 0x00000007c0000000)
+  eden space 16384K, 14% used [0x00000007aab00000,0x00000007aad3d8a8,0x00000007abb00000)
   from space 2560K, 0% used [0x00000007abd80000,0x00000007abd80000,0x00000007ac000000)
   to   space 2560K, 0% used [0x00000007abb00000,0x00000007abb00000,0x00000007abd80000)
  ParOldGen       total 44032K, used 0K [0x0000000780000000, 0x0000000782b00000, 0x00000007aab00000)
   object space 44032K, 0% used [0x0000000780000000,0x0000000780000000,0x0000000782b00000)
- Metaspace       used 2913K, capacity 4674K, committed 4864K, reserved 1056768K
+ Metaspace       used 2912K, capacity 4674K, committed 4864K, reserved 1056768K
   class space    used 315K, capacity 426K, committed 512K, reserved 1048576K
 
-Card table byte_map: [0x00000001147c0000,0x00000001149c1000] byte_map_base: 0x0000000110bc0000
+Card table byte_map: [0x0000000118fc0000,0x00000001191c1000] byte_map_base: 0x00000001153c0000
 
-Marking Bits: (ParMarkBitMap*) 0x00000001044b0e20
- Begin Bits: [0x0000000114b17000, 0x0000000115b17000)
- End Bits:   [0x0000000115b17000, 0x0000000116b17000)
+Marking Bits: (ParMarkBitMap*) 0x0000000108c78e20
+ Begin Bits: [0x0000000119317000, 0x000000011a317000)
+ End Bits:   [0x000000011a317000, 0x000000011b317000)
 
-Polling page: 0x0000000104b9c000
+Polling page: 0x0000000109368000
 
-CodeCache: size=245760Kb used=1191Kb max_used=1191Kb free=244568Kb
- bounds [0x0000000105400000, 0x0000000105670000, 0x0000000114400000]
- total_blobs=303 nmethods=71 adapters=146
+CodeCache: size=245760Kb used=1189Kb max_used=1189Kb free=244570Kb
+ bounds [0x0000000109c00000, 0x0000000109e70000, 0x0000000118c00000]
+ total_blobs=302 nmethods=70 adapters=146
  compilation: enabled
 
 Compilation events (10 events):
-Event: 0.220 Thread 0x00007f9ff2812000   67       1       java.lang.String::length (6 bytes)
-Event: 0.220 Thread 0x00007f9ff2812000 nmethod 67 0x0000000105522910 code [0x0000000105522a60, 0x0000000105522b70]
-Event: 0.221 Thread 0x00007f9ff2812000   69  s!   3       sun.misc.URLClassPath::getLoader (197 bytes)
-Event: 0.223 Thread 0x00007f9ff2812000 nmethod 69 0x0000000105522c10 code [0x0000000105523020, 0x0000000105525b68]
-Event: 0.223 Thread 0x00007f9ff2812000   70       3       java.util.zip.ZStreamRef::address (5 bytes)
-Event: 0.223 Thread 0x00007f9ff2812000 nmethod 70 0x0000000105527510 code [0x0000000105527660, 0x00000001055277b0]
-Event: 0.223 Thread 0x00007f9ff2812000   68  s    3       sun.misc.URLClassPath::getNextLoader (88 bytes)
-Event: 0.224 Thread 0x00007f9ff2812000 nmethod 68 0x0000000105527810 code [0x0000000105527a00, 0x00000001055282c8]
-Event: 0.224 Thread 0x00007f9ff2812000   71   !   3       sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
-Event: 0.226 Thread 0x00007f9ff2812000 nmethod 71 0x0000000105528790 code [0x0000000105528a20, 0x0000000105529968]
+Event: 0.146 Thread 0x00007fbb24801000   66       1       java.lang.String::length (6 bytes)
+Event: 0.147 Thread 0x00007fbb24801000 nmethod 66 0x0000000109d21c90 code [0x0000000109d21de0, 0x0000000109d21ef0]
+Event: 0.147 Thread 0x00007fbb24801000   68  s!   3       sun.misc.URLClassPath::getLoader (197 bytes)
+Event: 0.150 Thread 0x00007fbb24801000 nmethod 68 0x0000000109d21f90 code [0x0000000109d223a0, 0x0000000109d24ee8]
+Event: 0.150 Thread 0x00007fbb24801000   67  s    3       sun.misc.URLClassPath::getNextLoader (88 bytes)
+Event: 0.150 Thread 0x00007fbb24801000 nmethod 67 0x0000000109d26890 code [0x0000000109d26a80, 0x0000000109d27348]
+Event: 0.150 Thread 0x00007fbb24801000   69       3       java.util.zip.ZStreamRef::address (5 bytes)
+Event: 0.151 Thread 0x00007fbb24801000 nmethod 69 0x0000000109d27810 code [0x0000000109d27960, 0x0000000109d27ab0]
+Event: 0.151 Thread 0x00007fbb24801000   70   !   3       sun.misc.URLClassPath$JarLoader::getResource (85 bytes)
+Event: 0.152 Thread 0x00007fbb24801000 nmethod 70 0x0000000109d27b10 code [0x0000000109d27da0, 0x0000000109d28ce8]
 
 GC Heap History (0 events):
 No events
@@ -178,28 +178,28 @@ Deoptimization events (0 events):
 No events
 
 Internal exceptions (10 events):
-Event: 0.166 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4c8c0) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.166 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4cad0) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.182 Thread 0x00007f9ff3801800 Exception <a 'java/util/zip/ZipException'> (0x00000007aac4d850) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
-Event: 0.182 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4da58) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.182 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4dc68) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.194 Thread 0x00007f9ff3801800 Exception <a 'java/util/zip/ZipException'> (0x00000007aac5f558) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
-Event: 0.194 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac5f760) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.194 Thread 0x00007f9ff3801800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac5f970) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
-Event: 0.211 Thread 0x00007f9ff3801800 Exception <a 'java/io/FileNotFoundException'> (0x00000007aacaa650) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
-Event: 0.211 Thread 0x00007f9ff3801800 Exception <a 'java/io/FileNotFoundException'> (0x00000007aacacae0) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 0.121 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4c9b0) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.121 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4cbc0) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.122 Thread 0x00007fbb2380a800 Exception <a 'java/util/zip/ZipException'> (0x00000007aac4d940) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 0.122 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4db48) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.122 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac4dd58) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.123 Thread 0x00007fbb2380a800 Exception <a 'java/util/zip/ZipException'> (0x00000007aac5f648) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 0.124 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac5f850) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.124 Thread 0x00007fbb2380a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000007aac5fa60) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 0.142 Thread 0x00007fbb2380a800 Exception <a 'java/io/FileNotFoundException'> (0x00000007aacaa648) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 0.143 Thread 0x00007fbb2380a800 Exception <a 'java/io/FileNotFoundException'> (0x00000007aacacad8) thrown at [/HUDSON3/workspace/8-2-build-macosx-x86_64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 709]
 
 Events (10 events):
-Event: 0.221 loading class java/lang/NumberFormatException
-Event: 0.221 loading class java/lang/NumberFormatException done
-Event: 0.222 loading class java/lang/IndexOutOfBoundsException
-Event: 0.222 loading class java/lang/IndexOutOfBoundsException done
-Event: 0.224 loading class gnu/io/RXTXPort$MonitorThread
-Event: 0.224 loading class gnu/io/RXTXPort$MonitorThread done
-Event: 0.225 Thread 0x00007f9ff3843000 Thread added: 0x00007f9ff3843000
-Event: 0.233 Thread 0x00007f9ff3843800 Thread added: 0x00007f9ff3843800
-Event: 0.240 Thread 0x00007f9ff3843800 Thread exited: 0x00007f9ff3843800
-Event: 1.242 Thread 0x00007f9ff3843000 Thread exited: 0x00007f9ff3843000
+Event: 0.147 loading class java/lang/NumberFormatException
+Event: 0.147 loading class java/lang/NumberFormatException done
+Event: 0.148 loading class java/lang/IndexOutOfBoundsException
+Event: 0.148 loading class java/lang/IndexOutOfBoundsException done
+Event: 0.151 loading class gnu/io/RXTXPort$MonitorThread
+Event: 0.151 loading class gnu/io/RXTXPort$MonitorThread done
+Event: 0.152 Thread 0x00007fbb238f3000 Thread added: 0x00007fbb238f3000
+Event: 0.160 Thread 0x00007fbb25044800 Thread added: 0x00007fbb25044800
+Event: 0.165 Thread 0x00007fbb25044800 Thread exited: 0x00007fbb25044800
+Event: 1.167 Thread 0x00007fbb238f3000 Thread exited: 0x00007fbb238f3000
 
 
 Dynamic libraries:
@@ -379,23 +379,23 @@ Dynamic libraries:
 0x00000000080e3000 	/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication
 0x00000000080e3000 	/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication
 0x00000000080e3000 	/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore
-0x0000000103bd3000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/server/libjvm.dylib
+0x000000010839b000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/server/libjvm.dylib
 0x00000000080e3000 	/usr/lib/libstdc++.6.dylib
-0x0000000104b59000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libverify.dylib
-0x0000000104b67000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libjava.dylib
-0x0000000104baa000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libzip.dylib
-0x00000001187bd000 	/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/JavaRuntimeSupport
-0x00000001187d8000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework/Versions/A/JavaNativeFoundation
-0x0000000104bf0000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
+0x0000000109325000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libverify.dylib
+0x0000000109333000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libjava.dylib
+0x0000000109372000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/libzip.dylib
+0x000000011cf7d000 	/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/JavaRuntimeSupport
+0x000000011cf98000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework/Versions/A/JavaNativeFoundation
+0x000000011cfad000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
-0x00000001187ed000 	/System/Library/PrivateFrameworks/JavaLaunching.framework/Versions/A/JavaLaunching
+0x000000011cfba000 	/System/Library/PrivateFrameworks/JavaLaunching.framework/Versions/A/JavaLaunching
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework/Versions/A/CommonPanels
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print
 0x00000000080e3000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
-0x000000011a149000 	/Library/Java/Extensions/librxtxSerial.jnilib
+0x000000011e912000 	/Library/Java/Extensions/librxtxSerial.jnilib
 
 VM Arguments:
 jvm_args: -Dfile.encoding=UTF-8 
@@ -426,17 +426,17 @@ SIGQUIT: [libjvm.dylib+0x47e3dd], sa_mask[0]=11111111011111110111111111111111, s
 
 OS:Bsduname:Darwin 15.2.0 Darwin Kernel Version 15.2.0: Fri Nov 13 19:56:56 PST 2015; root:xnu-3248.20.55~2/RELEASE_X86_64 x86_64
 rlimit: STACK 8192k, CORE 0k, NPROC 709, NOFILE 10240, AS infinity
-load average:1.81 1.47 1.28
+load average:1.84 1.49 1.28
 
 CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, tsc, tscinvbit
 
-Memory: 4k page, physical 4194304k(21440k free)
+Memory: 4k page, physical 4194304k(304844k free)
 
 /proc/meminfo:
 
 
 vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for bsd-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 16:09:13 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
 
-time: Wed Jan 13 09:36:05 2016
+time: Wed Jan 13 09:59:37 2016
 elapsed time: 1 seconds (0d 0h 0m 1s)
 
