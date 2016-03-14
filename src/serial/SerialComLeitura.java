@@ -239,6 +239,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	}
 
+	@Override
 	public void run() {
 
 		try {
@@ -253,6 +254,7 @@ public class SerialComLeitura implements Runnable, SerialPortEventListener {
 
 	}
 
+	@Override
 	public void serialEvent(SerialPortEvent ev) {
 
 		StringBuffer bufferLeitura = new StringBuffer();

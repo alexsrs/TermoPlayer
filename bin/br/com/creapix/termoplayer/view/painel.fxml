@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="72.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.creapix.termoplayer.view.PainelController">
+   <children>
+      <MediaView fx:id="video" fitHeight="144.0" fitWidth="72.0" />
+      <Label fx:id="lblLabel" contentDisplay="CENTER" layoutX="28.0" layoutY="106.0" maxHeight="35.0" maxWidth="40.0" minHeight="35.0" minWidth="40.0" scaleShape="false" text="00" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="103.0" text="0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

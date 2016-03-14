@@ -1,9 +1,9 @@
 package serial;
 
+import br.com.creapix.termoplayer.view.PainelController;
 import javafx.scene.control.Label;
 import serial.SerialCom;
 import serial.SerialComLeitura;
-import termoplayer.view.PainelController;
 
 public class TestaSerial extends SerialCom {
 
